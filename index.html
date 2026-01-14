@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheena Marie Dinaguit | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #1a1a1a;
+            --card-bg: #2d2d2d;
+            --accent-purple: #8a2be2;
+            --text-main: #ffffff;
+            --text-dim: #b3b3b3;
+            --gradient: linear-gradient(135deg, #4b0082, #8a2be2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto 60px;
+            padding: 20px 0;
+        }
+
+        .logo { font-weight: 800; font-size: 1.2rem; }
+
+        .nav-links {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px 30px;
+            border-radius: 50px;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover { color: white; }
+
+        /* --- Hero Section --- */
+        .hero {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto 100px;
+            align-items: center;
+        }
+
+        .hero-text h3 { color: var(--accent-purple); font-size: 1rem; margin-bottom: 10px; }
+        .hero-text h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; }
+        .hero-text h2 { font-size: 2.5rem; font-weight: 300; margin-bottom: 20px; }
+        .hero-text p { color: var(--text-dim); max-width: 500px; margin-bottom: 15px; }
+
+        .profile-img-container {
+            background: #333;
+            border-radius: 100px 100px 20px 20px;
+            overflow: hidden;
+            aspect-ratio: 4/5;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .profile-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- Skills Section --- */
+        .skills-section {
+            max-width: 1100px;
+            margin: 0 auto 100px;
+            text-align: center;
+        }
+
+        .skills-section h2 {
+            font-size: 2.5rem;
+            letter-spacing: 5px;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-card {
+            background: linear-gradient(145deg, #333, #222);
+            padding: 50px;
+            border-radius: 30px;
+            transition: transform 0.3s;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .skill-card:hover { transform: translateY(-10px); border-color: var(--accent-purple); }
+
+        .skill-card img { width: 80px; margin-bottom: 20px; }
+        .skill-card p { font-weight: bold; letter-spacing: 2px; }
+
+        /* --- Contact Section --- */
+        .contact-section {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: linear-gradient(to right, rgba(138, 43, 226, 0.2), rgba(0,0,0,0));
+            padding: 60px;
+            border-radius: 40px;
+            position: relative;
+        }
+
+        .contact-header { text-align: center; margin-bottom: 40px; }
+        .contact-header h2 { font-size: 3rem; text-transform: uppercase; }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        input, textarea {
+            width: 100%;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 12px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .btn-send {
+            background: var(--accent-purple);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero, .contact-container { grid-template-columns: 1fr; }
+            .hero-text h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">My Portfolio</div>
+        <div class="nav-links">
+            <a href="#skills">Skills</a>
+            <a href="#about">About Me</a>
+            <a href="#contact">Contacts</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h3>I'm</h3>
+            <h1 style="color: var(--accent-purple);">Sheena Marie Dinaguit</h1>
+            <h2>I design and build web</h2>
+            <p>I am an IT student with experience in UI/UX design and front-end web and application development.</p>
+            <p>I build user-focused interfaces and functional systems for academic and personal projects.</p>
+        </div>
+        <div class="profile-img-container">
+            <img src="c:\Users\Hp\Downloads\formal photo.png">
+        </div>
+    </section>
+
+    <section class="skills-section" id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                <p>REACT</p>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+                <p>FIGMA</p>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="Github" style="filter: invert(1);">
+                <p>GITHUB</p>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                <p>CSS</p>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
+                <p>JAVASCRIPT</p>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                <p>HTML</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="contact-header">
+            <h2>Contact Me</h2>
+            <p>Get a question? Send me a message and I'll get back soon.</p>
+        </div>
+        <div class="contact-container">
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea rows="5" placeholder="Your Messages"></textarea>
+                <button type="submit" class="btn-send">Send Message</button>
+            </form>
+            <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 20px;">
+                <p style="margin-bottom: 10px;">Comments</p>
+                <label style="font-size: 0.8rem; color: var(--text-dim);">Name*</label>
+                <input type="text" placeholder="Enter your name">
+                <label style="font-size: 0.8rem; color: var(--text-dim);">Message*</label>
+                <textarea placeholder="Write your message here..."></textarea>
+                <button type="submit" class="btn-send">Send Message</button>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html> 
